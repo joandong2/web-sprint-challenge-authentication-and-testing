@@ -26,11 +26,19 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
 
+=== with sessions, after user sends there data to the body, it'll create a session key that will be stored in web server memory, or database, while web tokens, it'll generate and sign a set of characters/token that will be sent back to the user through response body and stored as cookies in localstorage
+
 2. What does `bcrypt` do to help us store passwords in a secure manner.
+
+=== its a password hashing functions, it converts passwords to a more secure combination of characters to protect them from bruts forces/being compromised
 
 3. How are unit tests different from integration and end-to-end testing.
 
+=== unit testing is checking of codes piece by piece, per functions. while integration tests how those pieces/functions works as a whole. and end-to-end, testing the system as a whole.
+
 4. How _Test Driven Development_ changes the way we write applications and tests.
+
+=== TDD will serve as our baseline on how our application is running from ground up. it will track down erroneous scripts as we build our codes, and we can detect those through testing each functions. It'll help us provide a better output, and an assurance of a working system at the end of the development.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -38,21 +46,21 @@ You are expected to be able to answer questions in these areas. Your responses c
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project
-- [ ] Add your team lead as collaborator on Github
-- [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-- [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
-- [ ] Push commits: git push origin `<firstName-lastName>`
+-   [ ] Create a forked copy of this project
+-   [ ] Add your team lead as collaborator on Github
+-   [ ] Clone your OWN version of the repository (Not Lambda's by mistake!)
+-   [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+-   [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly
+-   [ ] Push commits: git push origin `<firstName-lastName>`
 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
 
-- [ ] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
-- [ ] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
-- [ ] Configuration for running tests using `Jest`.
-- [ ] A **minimum o 2 tests** per API endpoint.
+-   [ ] An authentication workflow with functionality for account creation and login implemented inside `/auth/auth-router.js`. A `user` has `username` and `password`. Both properties are required.
+-   [ ] Middleware used to restrict access to resources for non authenticated requests. Use the file: `./auth/authenticate-middleware.js` as a starting point.
+-   [ ] Configuration for running tests using `Jest`.
+-   [ ] A **minimum o 2 tests** per API endpoint.
 
 **Note**: the database already has the users table, but if you run into issues, the migrations are available.
 
@@ -62,15 +70,15 @@ In your solution, it is essential that you follow best practices and produce cle
 
 After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-- [ ] Write at least 4 tests per endpoint.
-- [ ] Extract user validation into a separate method and write unit tests for it.
-- [ ] Use a separate testing database for the endpoint tests.
-- [ ] Implement authentication with the other method, if you used JWTs for MVP use sessions for stretch and vice versa.
+-   [ ] Write at least 4 tests per endpoint.
+-   [ ] Extract user validation into a separate method and write unit tests for it.
+-   [ ] Use a separate testing database for the endpoint tests.
+-   [ ] Implement authentication with the other method, if you used JWTs for MVP use sessions for stretch and vice versa.
 
 ## Submission format
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete after receiving your pull-request
+-   [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
+-   [ ] Add your team lead as a reviewer on the pull-request
+-   [ ] Your team lead will count the project as complete after receiving your pull-request
